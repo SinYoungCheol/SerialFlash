@@ -328,6 +328,7 @@ bool SerialFlashChip::ready()
 #define ID0_MACRONIX	0xC2
 #define ID0_SST		0xBF
 #define ID0_ADESTO      0x1F
+#define ID0_EON 0x1C // add by SinYoungCheol for EN25Q80B
 
 //#define FLAG_32BIT_ADDR	0x01	// larger than 16 MByte address
 //#define FLAG_STATUS_CMD70	0x02	// requires special busy flag check
