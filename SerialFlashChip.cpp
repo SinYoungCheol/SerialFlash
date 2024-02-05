@@ -456,7 +456,10 @@ uint32_t SerialFlashChip::capacity(const uint8_t *id)
 
 	if (id[0] == ID0_ADESTO && id[1] == 0x89) {
 		n = 1048576*16; //16MB
-	} else
+	} else // add EN25Q80B's 
+    if (id[0] == ID0_EON && id[1] == 0x30 && id[2] == 0x14) {
+        n = 1048576*8; // 8MB
+    } else
 	if (id[2] >= 16 && id[2] <= 31) {
 		n = 1ul << id[2];
 	} else
